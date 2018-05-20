@@ -11,7 +11,7 @@ end
 
 full_path = `osascript<<END
   tell application "Xcode"
-    set file_name to name of window 1
+    set file_name to name of front window
     set file_name to replace(file_name, " — Edited", "") of me
     
     set num to number of source document
