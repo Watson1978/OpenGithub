@@ -36,6 +36,13 @@
 			remoteGlobalIDString = A97A68BF20B08B8000C60C41;
 			remoteInfo = OpenGithubHelper;
 		};
+		A9801BE120B1E99E00F93E69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A97A688D20B08B5900C60C41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A97A68BF20B08B8000C60C41;
+			remoteInfo = OpenGithubHelper;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -224,6 +231,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A9801BE220B1E99E00F93E69 /* PBXTargetDependency */,
 			);
 			name = OpenGithubExtension;
 			productName = OpenGithubExtension;
@@ -354,6 +362,11 @@
 			isa = PBXTargetDependency;
 			target = A97A68BF20B08B8000C60C41 /* OpenGithubHelper */;
 			targetProxy = A97A68C920B08B8000C60C41 /* PBXContainerItemProxy */;
+		};
+		A9801BE220B1E99E00F93E69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A97A68BF20B08B8000C60C41 /* OpenGithubHelper */;
+			targetProxy = A9801BE120B1E99E00F93E69 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
