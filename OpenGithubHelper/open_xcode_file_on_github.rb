@@ -1,7 +1,7 @@
 def detect_project_root(path)
   path = File.dirname(path)
 
-  if Dir.glob(File.join(path, "*.xcodeproj")).count > 0
+  if Dir.glob(File.join(path, ".git")).count > 0
     return path
   end
 
@@ -47,7 +47,7 @@ file_path = full_path.sub("#{project_root}/", '')
 repository = nil
 Dir.chdir project_root do
   `git remote -v`.strip.lines do |line|
-    if line =~ %r{git@github.com:(.+)\.git \(fetch\)$}
+    if line =~ %r{git@github.com:(.+)\.git \(fetch\)$} || line =~ %r{https://github.com/(.+) \(fetch\)$}
       repository = $1
       break
     end
