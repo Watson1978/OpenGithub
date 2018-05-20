@@ -54,4 +54,9 @@ Dir.chdir project_root do
   end
 end
 
-system "open 'https://github.com/#{repository}/tree/master/#{file_path}'"
+line = ARGV[0] || ""
+unless line.empty?
+  line = "#" + line
+end
+
+system "open 'https://github.com/#{repository}/tree/master/#{file_path}#{line}'"

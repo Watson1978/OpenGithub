@@ -4,8 +4,8 @@
 @protocol OpenGithubHelperProtocol
 
 // Replace the API of this protocol with an API appropriate to the service you are vending.
-- (void)open: (void (^)(void))completion;
-    
+- (void)openWith: (nonnull NSString*)line completion:(void (^)(void))completion;
+
 @end
 
 /*
