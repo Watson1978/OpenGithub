@@ -48,11 +48,12 @@ repository = nil
 Dir.chdir project_root do
   `git remote -v`.strip.lines do |line|
     if line =~ %r{git@github.com:(.+)\.git \(fetch\)$}
-      repository = $1
-      break
+        repository = $1
+        break
     end
   end
 end
+exit unless repository
 
 line = ARGV[0] || ""
 unless line.empty?
