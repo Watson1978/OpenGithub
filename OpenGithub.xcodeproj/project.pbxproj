@@ -13,7 +13,7 @@
 		A97A68AD20B08B6E00C60C41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97A68AC20B08B6E00C60C41 /* Cocoa.framework */; };
 		A97A68B020B08B6E00C60C41 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A68AF20B08B6E00C60C41 /* SourceEditorExtension.swift */; };
 		A97A68B220B08B6E00C60C41 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A68B120B08B6E00C60C41 /* SourceEditorCommand.swift */; };
-		A97A68B720B08B6E00C60C41 /* OpenGithubExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A97A68AA20B08B6E00C60C41 /* OpenGithubExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A97A68B720B08B6E00C60C41 /* Open Github.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A97A68AA20B08B6E00C60C41 /* Open Github.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A97A68C520B08B8000C60C41 /* OpenGithubHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A97A68C420B08B8000C60C41 /* OpenGithubHelper.m */; };
 		A97A68C720B08B8000C60C41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A97A68C620B08B8000C60C41 /* main.m */; };
 		A97A68CB20B08B8000C60C41 /* OpenGithubHelper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = A97A68C020B08B8000C60C41 /* OpenGithubHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -52,7 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A97A68B720B08B6E00C60C41 /* OpenGithubExtension.appex in Embed App Extensions */,
+				A97A68B720B08B6E00C60C41 /* Open Github.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +87,7 @@
 		A97A689D20B08B5900C60C41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A97A689F20B08B5900C60C41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A97A68A020B08B5900C60C41 /* OpenGithub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenGithub.entitlements; sourceTree = "<group>"; };
-		A97A68AA20B08B6E00C60C41 /* OpenGithubExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OpenGithubExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A97A68AA20B08B6E00C60C41 /* Open Github.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Open Github.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97A68AC20B08B6E00C60C41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A97A68AF20B08B6E00C60C41 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		A97A68B120B08B6E00C60C41 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				A97A689520B08B5900C60C41 /* OpenGithub.app */,
-				A97A68AA20B08B6E00C60C41 /* OpenGithubExtension.appex */,
+				A97A68AA20B08B6E00C60C41 /* Open Github.appex */,
 				A97A68C020B08B8000C60C41 /* OpenGithubHelper.xpc */,
 			);
 			name = Products;
@@ -235,7 +235,7 @@
 			);
 			name = OpenGithubExtension;
 			productName = OpenGithubExtension;
-			productReference = A97A68AA20B08B6E00C60C41 /* OpenGithubExtension.appex */;
+			productReference = A97A68AA20B08B6E00C60C41 /* Open Github.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 		A97A68BF20B08B8000C60C41 /* OpenGithubHelper */ = {
@@ -552,7 +552,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.cat-soft.OpenGithub.OpenGithubExtension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Open Github";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "OpenGithubExtension/OpenGithubExtension-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -574,7 +574,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.cat-soft.OpenGithub.OpenGithubExtension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Open Github";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "OpenGithubExtension/OpenGithubExtension-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
