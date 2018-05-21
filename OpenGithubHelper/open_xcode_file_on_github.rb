@@ -45,6 +45,7 @@ project_root = detect_project_root(full_path)
 file_path = full_path.sub("#{project_root}/", '')
 
 repository = nil
+branch = nil
 Dir.chdir project_root do
   `git remote -v`.strip.lines do |line|
     if line =~ %r{git@github.com:(.+)\.git \(fetch\)$} || line =~ %r{https://github.com/(.+) \(fetch\)$}
@@ -52,12 +53,20 @@ Dir.chdir project_root do
       break
     end
   end
+  exit unless repository
+
+  `git branch -r`.strip.lines do |line|
+    if line =~ %r{.+/HEAD -> .+/(.+)$}
+      branch = $1
+      break
+    end
+  end
+  exit unless branch
 end
-exit unless repository
 
 line = ARGV[0] || ""
 unless line.empty?
   line = "#" + line
 end
 
-system "open 'https://github.com/#{repository}/tree/master/#{file_path}#{line}'"
+system "open 'https://github.com/#{repository}/blob/#{branch}/#{file_path}#{line}'"
