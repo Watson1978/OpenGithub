@@ -26,4 +26,4 @@ This is Xcode extension for easily opening the file with Github displayed on Xco
 
 3. The source code will be opened with Github on your browser.
 
-If you select a region in source code on Xcode, of cource, it will have a selecting region in your browser.
+When you select a region in source code on Xcode, of cource, it will have a selecting region in your browser.
