@@ -48,7 +48,7 @@ repository = nil
 branch = nil
 Dir.chdir project_root do
   `git remote -v`.strip.lines do |line|
-    if line =~ %r{git@github.com:(.+)\.git \(fetch\)$} || line =~ %r{https://github.com/(.+) \(fetch\)$}
+    if line =~ %r{git@github.com:(.+)\.git \(fetch\)$} || line =~ %r{https://github.com/(.+)\.git \(fetch\)$}
       repository = $1
       break
     end
