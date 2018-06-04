@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A929851120C59CAC0051D8A4 /* xcode_helper.rb in Resources */ = {isa = PBXBuildFile; fileRef = A929851020C59CAC0051D8A4 /* xcode_helper.rb */; };
 		A92C962320B20A0100BC2F43 /* OpenGithub.icns in Resources */ = {isa = PBXBuildFile; fileRef = A92C962220B20A0100BC2F43 /* OpenGithub.icns */; };
 		A97A689920B08B5900C60C41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A689820B08B5900C60C41 /* AppDelegate.swift */; };
 		A97A689B20B08B5900C60C41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97A689A20B08B5900C60C41 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A929851020C59CAC0051D8A4 /* xcode_helper.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = xcode_helper.rb; sourceTree = "<group>"; };
 		A92C962220B20A0100BC2F43 /* OpenGithub.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = OpenGithub.icns; sourceTree = "<group>"; };
 		A97A689520B08B5900C60C41 /* OpenGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97A689820B08B5900C60C41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				A9D0C84620B092E1007484EC /* open_xcode_file_on_github.rb */,
+				A929851020C59CAC0051D8A4 /* xcode_helper.rb */,
 				A97A68C220B08B8000C60C41 /* OpenGithubHelperProtocol.h */,
 				A97A68C320B08B8000C60C41 /* OpenGithubHelper.h */,
 				A97A68C420B08B8000C60C41 /* OpenGithubHelper.m */,
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D0C84720B092E1007484EC /* open_xcode_file_on_github.rb in Resources */,
+				A929851120C59CAC0051D8A4 /* xcode_helper.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
