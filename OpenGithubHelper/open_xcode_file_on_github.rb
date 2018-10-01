@@ -30,4 +30,4 @@ unless line.empty?
   line = "#" + line
 end
 
-system "open -n 'https://github.com/#{repository}/blob/#{branch}/#{xcode.file_path}#{line}'"
+system "open 'https://github.com/#{repository}/blob/#{branch}/#{xcode.file_path}#{line}'"
