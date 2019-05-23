@@ -13,6 +13,16 @@ Dir.chdir xcode.project_root do
       break
     end
   end
+
+  unless remote && branch
+    `git branch -r`.strip.lines do |line|
+      if line =~ %r{.+/HEAD -> (.+)/(.+)$}
+        remote = $1
+        branch = $2
+        break
+      end
+    end
+  end
   exit unless remote
   exit unless branch
 
