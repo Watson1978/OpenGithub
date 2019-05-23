@@ -512,7 +512,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KQ572MNR73;
+				DEVELOPMENT_TEAM = 3E97Y6CS78;
 				INFOPLIST_FILE = OpenGithub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -535,7 +535,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KQ572MNR73;
+				DEVELOPMENT_TEAM = 3E97Y6CS78;
 				INFOPLIST_FILE = OpenGithub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -553,9 +553,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OpenGithubExtension/OpenGithubExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KQ572MNR73;
+				DEVELOPMENT_TEAM = 3E97Y6CS78;
 				INFOPLIST_FILE = OpenGithubExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -579,7 +580,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KQ572MNR73;
+				DEVELOPMENT_TEAM = 3E97Y6CS78;
 				INFOPLIST_FILE = OpenGithubExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,9 +600,10 @@
 		A97A68CD20B08B8000C60C41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KQ572MNR73;
+				DEVELOPMENT_TEAM = 3E97Y6CS78;
 				INFOPLIST_FILE = OpenGithubHelper/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.cat-soft.OpenGithubHelper";
@@ -617,7 +619,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KQ572MNR73;
+				DEVELOPMENT_TEAM = 3E97Y6CS78;
 				INFOPLIST_FILE = OpenGithubHelper/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.cat-soft.OpenGithubHelper";
