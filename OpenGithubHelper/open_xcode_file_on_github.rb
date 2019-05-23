@@ -7,7 +7,8 @@ branch = nil
 repository = nil
 Dir.chdir xcode.project_root do
   `git branch -r --contains \`git rev-parse @\``.strip.lines do |line|
-    if line =~ %r{(.+)/(.+)$}
+    next if line.include?('HEAD')
+    if line.strip =~ %r{(.+)/(.+)$}
       remote = $1
       branch = $2
       break
