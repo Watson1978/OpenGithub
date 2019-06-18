@@ -2,34 +2,15 @@ class XcodeHelper
   def full_path
     @full_path ||= `osascript<<END
       tell application "Xcode"
-        set file_name to name of front window
-        set file_name to replace(file_name, " — Edited", "") of me
-        
-        set num to number of source document
-        
-        repeat with index from 0 to num
-          set file_path to path of source document index
-          set pos to offset of file_name in file_path
-          
-          if pos is greater than 0 then
-            return file_path
-          end if
-        end repeat
-      end tell
+        set num to index of front window
+        set file_path to ""
 
-      on replace(orgStr, tgtStr, newStr)
-        
-        local orgDelim, rtn
-        
-        set orgDelim to AppleScript's text item delimiters
-        set AppleScript's text item delimiters to {tgtStr}
-        set rtn to every text item of orgStr
-        set AppleScript's text item delimiters to {newStr}
-        set rtn to rtn as string
-        set AppleScript's text item delimiters to orgDelim
-        return rtn
-        
-      end replace
+        try
+          set file_path to path of source document (num - 1)
+        end try
+
+        return file_path
+      end tell
     END`.strip
   end
 
