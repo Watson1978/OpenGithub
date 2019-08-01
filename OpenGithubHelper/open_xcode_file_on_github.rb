@@ -17,7 +17,7 @@ Dir.chdir xcode.project_root do
 
   unless remote && branch
     `git branch -r`.strip.lines do |line|
-      if line =~ %r{.+/HEAD -> (^\/+)/(.+)$}
+      if line =~ %r{.+/HEAD -> ([^\/]+)/(.+)$}
         remote = $1
         branch = $2
         break
