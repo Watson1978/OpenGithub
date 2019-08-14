@@ -35,13 +35,14 @@ class XcodeHelper
 
   def project_root
     if @project_root.nil?
+      raise "Can't detect project root path" if full_path.empty?
       @project_root = File.dirname(full_path)
 
       loop do
         return @project_root if File.exist?(File.join(@project_root, ".git"))
 
         @project_root = File.dirname(@project_root)
-        if @project_root == "/"
+        if @project_root == "/" || @project_root == "."
           @project_root = nil
           return @project_root
         end
