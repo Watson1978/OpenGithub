@@ -1,10 +1,12 @@
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 // The protocol that this service will vend as its API. This header file will also need to be visible to the process hosting the service.
 @protocol OpenGithubHelperProtocol
 
 // Replace the API of this protocol with an API appropriate to the service you are vending.
-- (void)openWith: (nonnull NSString*)line completion:(void (^)(void))completion;
+- (void)openWith: (NSString*)line completion:(void (^)(void))completion;
 
 @end
 
@@ -26,3 +28,5 @@ Once you have a connection to the service, you can use it like this:
 
      [_connectionToService invalidate];
 */
+
+NS_ASSUME_NONNULL_END
