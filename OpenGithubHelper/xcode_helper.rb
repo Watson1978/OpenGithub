@@ -1,36 +1,20 @@
 class XcodeHelper
   def full_path
-    @full_path ||= `osascript<<END
-      tell application "Xcode"
-        set file_name to name of front window
-        set file_name to replace(file_name, " — Edited", "") of me
-        
-        set num to number of source document
-        
-        repeat with index from 0 to num
-          set file_path to path of source document index
-          set pos to offset of file_name in file_path
-          
-          if pos is greater than 0 then
-            return file_path
-          end if
-        end repeat
-      end tell
+    script = <<~SCRIPT
+      let app = Application("Xcode");
+      let windowTitle = app.windows[0].name().replace(" — Edited", "");
 
-      on replace(orgStr, tgtStr, newStr)
-        
-        local orgDelim, rtn
-        
-        set orgDelim to AppleScript's text item delimiters
-        set AppleScript's text item delimiters to {tgtStr}
-        set rtn to every text item of orgStr
-        set AppleScript's text item delimiters to {newStr}
-        set rtn to rtn as string
-        set AppleScript's text item delimiters to orgDelim
-        return rtn
-        
-      end replace
-    END`.strip
+      for (let i = 0; i < app.documents.length; i++) {
+        let path = app.documents[i].path();
+        if (path.includes(windowTitle)) {
+          path;
+        }
+      }
+    SCRIPT
+
+    @full_path ||= `osascript -l JavaScript<<END
+#{script}
+END`.strip
   end
 
   def project_root
