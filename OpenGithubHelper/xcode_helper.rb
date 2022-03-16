@@ -4,6 +4,10 @@ class XcodeHelper
       let app = Application("Xcode");
       let windowTitle = app.windows[0].name().replace(" — Edited", "");
 
+      /* Since Xcode 13.2, window titile might have the project name */
+      /* Example: "SampleProject — AppDelegate.m" */
+      windowTitle = windowTitle.replace(/(.+) — (.+)/, "$2");
+
       for (let i = 0; i < app.documents.length; i++) {
         let path = app.documents[i].path();
         if (path.includes(windowTitle)) {
@@ -39,4 +43,11 @@ END`.strip
   def file_path
     full_path.sub("#{project_root}/", '')
   end
+end
+
+if __FILE__ == $0
+  xcode = XcodeHelper.new
+  puts "Project root:   " + xcode.project_root.to_s
+  puts "File path:      " + xcode.file_path.to_s
+  puts "File full path: " + xcode.full_path.to_s
 end
