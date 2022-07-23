@@ -118,6 +118,7 @@
 		A97A68C620B08B8000C60C41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A97A68C820B08B8000C60C41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A97A68D020B08BA400C60C41 /* OpenGithubExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenGithubExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		A9CC8EB6288C2DF700437B41 /* OpenGithubHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenGithubHelper.entitlements; sourceTree = "<group>"; };
 		A9D0C84620B092E1007484EC /* open_xcode_file_on_github.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = open_xcode_file_on_github.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +207,7 @@
 		A97A68C120B08B8000C60C41 /* OpenGithubHelper */ = {
 			isa = PBXGroup;
 			children = (
+				A9CC8EB6288C2DF700437B41 /* OpenGithubHelper.entitlements */,
 				A9D0C84620B092E1007484EC /* open_xcode_file_on_github.rb */,
 				A929851020C59CAC0051D8A4 /* xcode_helper.rb */,
 				A97A68C220B08B8000C60C41 /* OpenGithubHelperProtocol.h */,
@@ -635,6 +637,7 @@
 		A97A68CD20B08B8000C60C41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OpenGithubHelper/OpenGithubHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -654,6 +657,7 @@
 		A97A68CE20B08B8000C60C41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OpenGithubHelper/OpenGithubHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
